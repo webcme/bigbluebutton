@@ -43,12 +43,16 @@ Notes.mxml is the main view of the SharedNotes application
 			}
 			
 			public function getPrefferedPosition():String{ 
-				return MainCanvas.MIDDLE;
+				return MainCanvas.POPUP;
 			}
 			
 		]]>
 	</mx:Script>
 	
 	<!-- The text area where the notes get displayed -->
-	<mx:TextArea id="txtArea" width="100%" height="100%" />
+	<mx:VideoDisplay id="vidArea" width="100%" height="100%" />
+	<mx:HBox width="100%">
+		<mx:Button label="Pause" enabled="{vidArea.playing}" click="vidArea.pause()"/>
+		<mx:Button label="Full Screen"/>
+	</mx:HBox>
 </MDIWindow>
