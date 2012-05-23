@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<mx:Module xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute" width="400" height="300">
+<mx:Module xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute" width="400" height="300"
+		   implements="org.bigbluebutton.common.IBigBlueButtonModule">
 	<mx:Script>
 		<![CDATA[
 			import org.bigbluebutton.common.LogUtil;
@@ -15,7 +16,7 @@
 			}
 			
 			public function start(attributes:Object):void {	
-				LogUtil.debug("Videodock attr: " + attributes.username);
+				//LogUtil.debug("Videodock attr: " + attributes.username);
 				
 			}
 			
