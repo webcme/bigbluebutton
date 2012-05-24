@@ -57,6 +57,7 @@ Notes.mxml is the main view of the SharedNotes application
 			
 			private function playStream():void {
 				ns = new NetStream(nc);
+				ns.bufferTime(0);
 				ns.play("NCNP");
 				
 				video.attachNetStream(ns);
