@@ -82,6 +82,7 @@ Notes.mxml is the main view of the SharedNotes application
 			
 			public function ns_onMetaData(infoObject:Object):void {
 				// stub
+				trace(infoObject);
 				vidWidth = infoObject.width;
 				vidHeight = infoObject.height;
 				scaleVideo();
