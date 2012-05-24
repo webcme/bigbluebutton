@@ -85,7 +85,7 @@ Notes.mxml is the main view of the SharedNotes application
 			}
 			
 			private function scaleVideo():void {
-				if (vidWidth & vidHeight) {
+				if (vidWidth && vidHeight) {
 					if ((vidContainer.width / vidContainer.height) > (vidWidth / vidHeight)) {
 						video.height = vidContainer.height;
 						video.scaleX = video.scaleY;
