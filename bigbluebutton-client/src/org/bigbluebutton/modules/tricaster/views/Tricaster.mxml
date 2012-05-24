@@ -101,7 +101,7 @@ Notes.mxml is the main view of the SharedNotes application
 	</mx:Script>
 	
 	<!-- The text area where the notes get displayed -->
-	<mx:UIComponent id="vidContainer" width="100%" height="100%" resize="scaleVideo"/>
+	<mx:UIComponent id="vidContainer" width="100%" height="100%" resize="scaleVideo();"/>
 	<mx:HBox width="100%">
 		<mx:Button label="Play" click="playStream();"/>
 	</mx:HBox>
