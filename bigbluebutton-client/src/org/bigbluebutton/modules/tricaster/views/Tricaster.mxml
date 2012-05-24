@@ -46,9 +46,20 @@ Notes.mxml is the main view of the SharedNotes application
 			
 			private function onCreationComplete():void{
 				nc = new NetConnection();
+				nc.addEventListener(NetStatusEvent.NET_STATUS, nc_StatusEvent);
+				
 				nc.connect("rtmp://video.webcme.net/wrl");
 			}
 			
+			private function nc_StatusEvent(event:NetStatusEvent):void {
+				switch (event.info.code) {
+					case "NetConnection.Connect.Success":
+						playStream();
+						break;
+					
+				}
+				
+			}
 			private function playStream():void {
 				
 				var nsClient:Object = {};
