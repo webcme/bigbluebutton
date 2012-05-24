@@ -44,7 +44,7 @@ Notes.mxml is the main view of the SharedNotes application
 			
 			private function onCreationComplete():void{
 				nc = new NetConnection();
-				nc.connect("rtmp://video.webcme.net/webcme");
+				nc.connect("rtmp://video.webcme.net/wrl");
 				
 				//ns = new NetStream(nc);
 				//ns.play("Pretest.flv");
@@ -57,7 +57,7 @@ Notes.mxml is the main view of the SharedNotes application
 			
 			private function playStream():void {
 				ns = new NetStream(nc);
-				ns.play("Pretest.flv");
+				ns.play("NCNP");
 				
 				video.attachNetStream(ns);
 			}
