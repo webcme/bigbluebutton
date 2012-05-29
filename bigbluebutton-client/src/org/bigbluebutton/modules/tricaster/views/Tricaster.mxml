@@ -66,7 +66,7 @@ Notes.mxml is the main view of the SharedNotes application
 				nsClient.onMetaData = ns_onMetaData;
 				
 				ns = new NetStream(nc);
-				ns.bufferTime = 0;
+				ns.bufferTime = 0.1;
 				ns.client = nsClient;
 				ns.play("NCNP");
 
