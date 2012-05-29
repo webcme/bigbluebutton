@@ -40,6 +40,7 @@ Notes.mxml is the main view of the SharedNotes application
 			private var nc:NetConnection;
 			
 			private var ns:NetStream;
+			private var st:SoundTransform;
 			private var video:Video;
 			private var vidWidth:Number;
 			private var vidHeight:Number;
@@ -68,6 +69,8 @@ Notes.mxml is the main view of the SharedNotes application
 				ns = new NetStream(nc);
 				ns.bufferTime = 0.1;
 				ns.client = nsClient;
+				st = new SoundTransform();
+				ns.soundTransform = st;
 				ns.play("NCNP");
 
 			}
@@ -107,12 +110,22 @@ Notes.mxml is the main view of the SharedNotes application
 				}
 			}
 			
+			private function toggleMute():void {
+				if (st.volume = 1) {
+					muteButton.label = "Unmute";
+					st.volume = 0;
+				} else {
+					muteButton.label = "Mute";
+					st.volume = 1;
+				}
+			}
+			
 		]]>
 	</mx:Script>
 	
 	<!-- The text area where the notes get displayed -->
 	<mx:UIComponent id="vidContainer" width="100%" height="100%" resize="scaleVideo();"/>
 	<mx:HBox width="100%">
-		<mx:Button label="Play" click="playStream();"/>
+		<mx:Button id="muteButton" label="Mute" click="toggleMute();"/>
 	</mx:HBox>
 </MDIWindow>
