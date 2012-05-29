@@ -114,10 +114,11 @@ Notes.mxml is the main view of the SharedNotes application
 				if (st.volume == 1) {
 					muteButton.label = "Unmute";
 					st.volume = 0;
+					ns.soundTransform = st;
 				} else {
 					muteButton.label = "Mute";
 					st.volume = 1;
-				}
+					ns.soundTransform = st;				}
 			}
 			
 		]]>
