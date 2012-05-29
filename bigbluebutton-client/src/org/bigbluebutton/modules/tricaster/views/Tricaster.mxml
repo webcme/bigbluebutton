@@ -111,7 +111,7 @@ Notes.mxml is the main view of the SharedNotes application
 			}
 			
 			private function toggleMute():void {
-				if (st.volume = 1) {
+				if (st.volume == 1) {
 					muteButton.label = "Unmute";
 					st.volume = 0;
 				} else {
