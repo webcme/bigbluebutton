@@ -25,7 +25,8 @@ Notes.mxml is the main view of the SharedNotes application
 -->
 <MDIWindow xmlns="flexlib.mdi.containers.*" xmlns:mx="http://www.adobe.com/2006/mxml" 
 		   width="400" height="300" xmlns:mate="http://mate.asfusion.com/" 
-		   implements="org.bigbluebutton.common.IBbbModuleWindow" creationComplete="onCreationComplete()"
+		   implements="org.bigbluebutton.common.IBbbModuleWindow" 
+		   title="{windowTitle}" creationComplete="onCreationComplete()"
 		   label="Example Chat Window" layout="vertical">
 	
 	<mx:Script>
@@ -36,8 +37,9 @@ Notes.mxml is the main view of the SharedNotes application
 			
 			public var moduleAttributes:Object;
 			
-			[Bindable]
-			private var nc:NetConnection;
+			[Bindable] private var windowTitle:String = "Live Stream";
+			
+			[Bindable] private var nc:NetConnection;
 			
 			private var ns:NetStream;
 			private var st:SoundTransform;
