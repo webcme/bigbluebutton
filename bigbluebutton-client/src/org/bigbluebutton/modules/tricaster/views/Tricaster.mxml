@@ -27,7 +27,7 @@ Notes.mxml is the main view of the SharedNotes application
 		   width="400" height="300" xmlns:mate="http://mate.asfusion.com/" 
 		   implements="org.bigbluebutton.common.IBbbModuleWindow" 
 		   title="{windowTitle}" creationComplete="onCreationComplete()"
-		   label="Tricaster Window" layout="absolute" showCloseButton="false">
+		   label="Tricaster Window" layout="vertical" showCloseButton="false" >
 	
 	<mx:Script>
 		<![CDATA[
@@ -106,10 +106,12 @@ Notes.mxml is the main view of the SharedNotes application
 						video.height = vidContainer.height;
 						video.scaleX = video.scaleY;
 						video.x = (vidContainer.width - video.width) / 2;
+						video.y = 0;
 					} else {
 						video.width = vidContainer.width;
 						video.scaleY = video.scaleX;
 						video.y = (vidContainer.height - video.height) /2;
+						video.x = 0;
 					}
 				}
 			}
